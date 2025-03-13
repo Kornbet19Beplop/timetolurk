@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time to Lurk</title>
+    <link rel="icon" href="img/mwehe.jpg" type="img/x-icon" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffcccb;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .top-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 20px 0;
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .top-box h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #ff6f61;
+            display: contents;
+            align-items: center;
+        }
+
+        .top-box p {
+            font-size: 18px;
+            margin: 10px 0 0;
+        }
+
+        .timer {
+            margin-top: 10px;
+        }
+
+        .timer h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+            color: #ff6f61;
+        }
+
+        .timer div {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px 0;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .box img {
+            width: 80%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .box p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #ff6f61;
+        }
+
+        .heart-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+            border-radius: 50%; 
+            object-fit: cover; 
+        }
+
+        .message-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 20px 0;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .message-box p {
+            font-size: 20px;
+            color: #ff6f61;
+            margin: 0;
+        }
+
+        .video-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 20px 0;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .video-box video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .message-box .custom-p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+            font-size: 16px; 
+            color: #333; 
+            text-align: justify; 
+            margin-top: 10px; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-box">
+        <img src="img/mwehe.jpg" alt="Heart Icon" class="heart-icon">
+        <div>
+            <h1>How long have we been together?</h1>
+            <p>One month written in our story</p>
+            <div class="timer">
+                <h2>Time Together:</h2>
+                <div id="timeTogether">00 days, 00 hours, 00 minutes, 00 seconds</div>
+            </div>
+        </div>
+        <img src="img/kewl.jpg" alt="Heart Icon" class="heart-icon">
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <img src="img/1.jpg" alt="Image 1">
+            <p>Anik anik (⸝⸝> ᴗ•⸝⸝)</p>
+        </div>
+        <div class="box">
+            <img src="img/2.jpg" alt="Image 2">
+            <p>( ꩜///꩜;) </p>
+        </div>
+        <div class="box">
+            <img src="img/3.jpg" alt="Image 3">
+            <p>Woaaaahh (˶˃ ᵕ ˂˶) </p>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="box">
+            <img src="img/4.jpg" alt="Image 4">
+            <p>I'll be your seasons >ᴗ< </p>
+        </div>
+        <div class="box">
+            <img src="img/5.jpg" alt="Image 5">
+            <p>Pasingit :3</p>
+        </div>
+        <div class="box">
+            <img src="img/RobloxScreenShot20241217_152606811.png" alt="Image 6">
+            <p>Virtual dinner date :>>>>></p>
+        </div>
+    </div>
+
+    <div class="message-box">
+        <p>Every moment with you is a treasure. Happy First Monthsary, langg! ❤️</p>
+        <p class="custom-p">In just one month, we've shared laughter, warmth, and moments that made us stronger. We've faced little challenges, learned from each other, and grown closer through it all. I know that sometimes it is hard to say whats on your mind, but I want you to know that I'll be patient, always. I'll give you the time and space you need, because every part of you is worth understanding.
+            Thank you for being you, for trusting me, and for choosing us every day. Here’s to many more months of love, growth, and endless memories together. I love you.</p>
+    </div>
+
+    <div class="video-box">
+        <p>Time To Lurk (  ≧ᗜ≦)</p>
+        <video controls>
+            <source src="img/lurking.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <audio id="background-music" autoplay loop>
+        <source src="img/blue (Official Music Video).mp3">
+    </audio>
+
+    <script>
+        const startDate = new Date('2025-02-14T00:00:00');
+
+        function updateTimer() {
+            const currentDate = new Date();
+            const timeDifference = currentDate - startDate;
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById('timeTogether').innerText =
+                `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
+
+        setInterval(updateTimer, 1000);
+
+        updateTimer();
+
+        document.getElementById('background-music').volume = 0.3;
+
+    </script>
+</body>
+</html>

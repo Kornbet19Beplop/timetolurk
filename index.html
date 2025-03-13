@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time to Lurk</title>
+    <link rel="icon" href="img/mwehe.jpg" type="img/x-icon" />
+    <style>
+        body {
+            background-image: url('img/bak.jpg');
+            background-size: contain;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffcccb;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 600px;
+            height: 400px;
+        }
+
+        .image-container {
+            flex: 1;
+            background-image: url('img/bad.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .numpad-container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .numpad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .numpad button {
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            background-color: #ff6f61;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .numpad button:hover {
+            background-color: #ff3b2f;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .redirect-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .redirect-button:hover {
+            background-color: #ff3b2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container"></div>
+        <div class="numpad-container">
+            <div class="numpad">
+                <button onclick="addNumber('1')">1</button>
+                <button onclick="addNumber('2')">2</button>
+                <button onclick="addNumber('3')">3</button>
+                <button onclick="addNumber('4')">4</button>
+                <button onclick="addNumber('5')">5</button>
+                <button onclick="addNumber('6')">6</button>
+                <button onclick="addNumber('7')">7</button>
+                <button onclick="addNumber('8')">8</button>
+                <button onclick="addNumber('9')">9</button>
+                <button onclick="clearInput()">C</button>
+                <button onclick="addNumber('0')">0</button>
+                <button onclick="checkPassword()">✓</button>
+            </div>
+            <div class="message" id="message"></div>
+            <button class="redirect-button" id="redirectButton" onclick="redirectToSuccessPage()">Aliiii Mwehehe :></button>
+        </div>
+    </div>
+
+    <script>
+        let input = '';
+
+        function addNumber(num) {
+            input += num;
+            document.getElementById('message').innerText = input;
+        }
+
+        function clearInput() {
+            input = '';
+            document.getElementById('message').innerText = '';
+        }
+
+        function checkPassword() {
+            const correctPassword = '214'; 
+            if (input === correctPassword) {
+                document.getElementById('message').innerText = '❤️ Happy Monthsary ❤️';
+                document.getElementById('redirectButton').style.display = 'block'; 
+            } else {
+                document.getElementById('message').innerText = 'Ngeee sayop hahaha';
+                input = '';
+            }
+        }
+
+        function redirectToSuccessPage() {
+            window.location.href = 'second.html'; 
+        }
+    </script>
+</body>
+</html>
